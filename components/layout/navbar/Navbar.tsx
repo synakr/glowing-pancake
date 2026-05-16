@@ -4,7 +4,7 @@ import Container from "../Container";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Leaf, Menu, TreePalm, X } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -41,9 +41,11 @@ export default function Navbar() {
             
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700">
-                +
-              </div>
+              <Link href="/">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700">
+                  <Leaf />
+                </div>
+              </Link>
 
               <div>
                 <h2 className="text-xl font-bold text-[#0b2c6d]">

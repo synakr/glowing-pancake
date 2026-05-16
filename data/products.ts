@@ -3,7 +3,9 @@ export type ProductCategory =
   | "Neurology"
   | "Diabetology"
   | "Respiratory"
-  | "Gastroenterology";
+  | "Gastroenterology"
+  | "Osteology"
+  | "Dermatology";
 
 export type Product = {
   id: string;
@@ -73,197 +75,17 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "cardioplus-01",
-
-    slug: "cardioplus",
-
-    status: "active",
-
-    name: "CardioPlus",
-
-    genericName: "Olmesartan Medoxomil + Hydrochlorothiazide",
-
-    category: "Cardiology",
-
-    therapeuticSegment: "Cardiovascular Care",
-
-    dosageForm: "Tablet",
-
-    prescriptionRequired: true,
-
-    images: ["/products/product-1.png", "/products/product-1-2.png"],
-
-    shortDescription:
-      "Advanced antihypertensive formulation designed for effective blood pressure management.",
-
-    composition: [
-      {
-        ingredient: "Olmesartan Medoxomil",
-        strength: "40mg",
-      },
-      {
-        ingredient: "Hydrochlorothiazide",
-        strength: "12.5mg",
-      },
-    ],
-
-    indications: [
-      "Hypertension Management",
-      "Cardiovascular Protection",
-      "Blood Pressure Control",
-    ],
-
-    keyHighlights: [
-      "Long-lasting blood pressure control",
-      "Clinically trusted formulation",
-      "WHO-GMP manufactured",
-    ],
-
-    packaging: "10x10 Blister Pack",
-
-    storage: "Store below 30°C in a cool and dry place",
-
-    certifications: ["WHO-GMP Certified", "ISO 9001 Certified"],
-
-    details: {
-      introduction:
-        "CardioPlus is developed to support effective hypertension management and cardiovascular care.",
-
-      dosageInstructions: "Use as directed by a healthcare professional.",
-
-      safetyInformation: [
-        "Keep out of reach of children",
-        "Use under medical supervision",
-      ],
-    },
-  },
-
-  {
-    id: "neurovex-01",
-
-    slug: "neurovex",
-
-    status: "active",
-
-    name: "NeuroVex",
-
-    genericName: "Citicoline + Piracetam",
-
-    category: "Neurology",
-
-    therapeuticSegment: "Neurological Care",
-
-    dosageForm: "Capsule",
-
-    prescriptionRequired: true,
-
-    images: ["/products/product-2.png", "/products/product-2-2.png"],
-
-    shortDescription:
-      "Neurological support formulation for cognitive and nerve health.",
-
-    composition: [
-      {
-        ingredient: "Citicoline",
-        strength: "500mg",
-      },
-      {
-        ingredient: "Piracetam",
-        strength: "800mg",
-      },
-    ],
-
-    indications: ["Cognitive Support", "Neurological Wellness"],
-
-    keyHighlights: [
-      "Supports cognitive performance",
-      "Advanced neuro formulation",
-    ],
-
-    packaging: "5x10 Capsule Strip",
-
-    storage: "Store below 25°C in a cool and dry place",
-
-    certifications: ["WHO-GMP Certified", "ISO Certified"],
-
-    details: {
-      introduction:
-        "NeuroVex supports neurological wellness through advanced pharmaceutical research.",
-
-      dosageInstructions: "Take as prescribed by your healthcare professional.",
-
-      safetyInformation: ["Avoid self-medication", "Store away from moisture"],
-    },
-  },
-
-  {
-    id: "glucofine-01",
-
-    slug: "glucofine",
-
-    status: "active",
-
-    name: "GlucoFine",
-
-    genericName: "Metformin Hydrochloride",
-
-    category: "Diabetology",
-
-    therapeuticSegment: "Diabetic Care",
-
-    dosageForm: "Tablet",
-
-    prescriptionRequired: true,
-
-    images: ["/products/product-3.png", "/products/product-3-2.png"],
-
-    shortDescription:
-      "Modern anti-diabetic formulation for glycemic management.",
-
-    composition: [
-      {
-        ingredient: "Metformin Hydrochloride",
-        strength: "500mg",
-      },
-    ],
-
-    indications: ["Type 2 Diabetes", "Blood Sugar Management"],
-
-    keyHighlights: [
-      "Reliable glucose control",
-      "Trusted diabetic care solution",
-    ],
-
-    packaging: "10x15 Tablet Strip",
-
-    storage: "Store below 25°C in a dry environment",
-
-    certifications: ["WHO-GMP Certified", "ISO Certified"],
-
-    details: {
-      introduction: "GlucoFine supports effective blood glucose management.",
-
-      dosageInstructions: "Take exactly as prescribed by your physician.",
-
-      safetyInformation: [
-        "Monitor blood sugar regularly",
-        "Use under medical supervision",
-      ],
-    },
-  },
-
-  {
     id: "corcium-01",
 
     slug: "corcium-tablet",
 
     status: "active",
 
-    name: "Corcium Tablet",
+    name: "Korsium-BT Tablet",
 
     genericName: "Coral Calcium + Calcium Carbonate",
 
-    category: "Diabetology",
+    category: "Osteology",
 
     therapeuticSegment: "Bone & Joint Care",
 
@@ -332,12 +154,12 @@ export const products: Product[] = [
 
     status: "active",
 
-    name: "Nutrajoint Capsule",
+    name: "Neutajoint-C Capsule",
 
     genericName:
       "Boswellia Serrata Extract + Rosehip Extract + Curcuma Longa Extract",
 
-    category: "Gastroenterology",
+    category: "Osteology",
 
     therapeuticSegment: "Joint & Mobility Care",
 
@@ -409,7 +231,7 @@ export const products: Product[] = [
   {
     id: "itrazole-01",
 
-    slug: "itrazole-200-capsule",
+    slug: "itraazol-200 Capsule",
 
     status: "active",
 
@@ -417,7 +239,7 @@ export const products: Product[] = [
 
     genericName: "Itraconazole",
 
-    category: "Respiratory",
+    category: "Dermatology",
 
     therapeuticSegment: "Anti-Fungal Care",
 
@@ -480,7 +302,7 @@ export const products: Product[] = [
 
     status: "discontinued",
 
-    name: "Billargic M Tablet",
+    name: "Bilargi-M Tablet",
 
     genericName: "Bilastine + Montelukast",
 
@@ -552,11 +374,11 @@ export const products: Product[] = [
 
     status: "active",
 
-    name: "Itazole 100mg Capsule",
+    name: "Itaazol 100mg Capsule",
 
     genericName: "Itraconazole",
 
-    category: "Respiratory",
+    category: "Dermatology",
 
     therapeuticSegment: "Anti-Fungal Care",
 

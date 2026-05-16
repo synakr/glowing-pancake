@@ -184,7 +184,7 @@ export default function ProductModal({
           duration-200
           sm:max-h-[95vh]
           sm:rounded-2xl
-          lg:rounded-4xl
+          lg:rounded-xl
         "
       >
         {/* Close */}
@@ -248,14 +248,13 @@ export default function ProductModal({
               lg:flex-col
               lg:border-b-0
               lg:border-r
-              lg:p-3
+              lg:p-2
             "
           >
             {/* Tabs */}
             <div
               className="
                 flex
-                gap-2
                 overflow-x-auto
                 min-w-0
                 custom-scrollbar

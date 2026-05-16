@@ -9,6 +9,8 @@ import {
   LayoutGrid,
   Search,
   SlidersHorizontal,
+  Bone,
+  Hand,
 } from "lucide-react";
 
 import { products } from "@/data/products";
@@ -27,6 +29,8 @@ const categoryIcons = {
   Diabetology: Activity,
   Respiratory: Wind,
   Gastroenterology: Pill,
+  Osteology: Bone,
+  Dermatology: Hand,
 };
 
 export default function ProductFilters({

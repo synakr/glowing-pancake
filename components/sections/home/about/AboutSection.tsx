@@ -25,7 +25,7 @@ export default function AboutSection() {
       <div className="grid gap-8 lg:grid-cols-2">
         
         {/* LEFT */}
-        <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0b2c6d] to-cyan-700 p-8 text-white">
+        <div className="relative overflow-hidden rounded-4xl bg-blue-500 p-8 text-white">
           
           {/* Glow */}
           <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl" />
@@ -39,7 +39,7 @@ export default function AboutSection() {
               Driven By Innovation, Quality & Global Healthcare Impact
             </h2>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-blue-100">
+            <p className="italic mt-6 max-w-xl text-lg leading-8 text-blue-100">
               We are committed to advancing pharmaceutical excellence through
               cutting-edge research, world-class manufacturing, and ethical
               healthcare solutions.
@@ -98,11 +98,11 @@ export default function AboutSection() {
                   p-7
                 "
               >
-                <h3 className="text-4xl font-bold text-[#0b2c6d]">
+                <h3 className="text-3xl font-bold text-[#0b2c6d]">
                   {item.value}
                 </h3>
 
-                <p className="mt-3 text-slate-600">
+                <p className="text-sm text-slate-600">
                   {item.label}
                 </p>
               </div>

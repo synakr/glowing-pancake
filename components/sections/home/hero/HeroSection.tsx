@@ -6,6 +6,7 @@ import {
   Globe,
   PillBottle,
 } from "lucide-react";
+import Link from "next/link";
 
 // new exact text here
 
@@ -33,27 +34,30 @@ export default function HeroSection() {
             </h1>
 
             {/* Description */}
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+            <p className="italic mt-6 max-w-xl text-lg leading-8 text-slate-600">
               Delivering high-quality pharmaceutical solutions with cutting-edge
               research and unwavering commitment to patient care worldwide.
             </p>
 
             {/* CTA */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              
-              <button className="flex items-center gap-2 rounded-full bg-[#0b2c6d] px-6 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]">
-                Explore Products
-                <ArrowRight className="h-4 w-4" />
-              </button>
+              <Link href={"/products"}>
+                <button className="flex items-center gap-2 rounded-full bg-[#0b2c6d] px-6 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]">
+                  Explore Products
+                  <ArrowRight className="h-4 w-4" />
+                </button>              
+              </Link>
 
-              <button className="rounded-full border border-slate-300 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-cyan-400">
-                Learn More About Us
-              </button>
+              <Link href={"/about"}>
+                <button className="rounded-full border border-slate-300 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-cyan-400">
+                  Learn More About Us
+                </button>              
+              </Link>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="mt-12 grid grid-cols-3 gap-4">
+          <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
             {[
               {
                 value: "25+",
@@ -79,27 +83,27 @@ export default function HeroSection() {
                   className="
                     flex
                     items-center
-                    gap-4
-                    rounded-2xl
+                    gap-3 sm:gap-4
+                    rounded-xl sm:rounded-2xl
                     border
                     border-white/70
                     bg-white
-                    p-2
+                    p-3 sm:p-4
                     shadow-sm
                   "
                 >
                   {/* Left Column */}
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-100">
-                    <Icon className="h-7 w-7 text-cyan-700" />
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-cyan-100">
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-cyan-700" />
                   </div>
 
                   {/* Right Column */}
                   <div>
-                    <h3 className="text-xl font-bold leading-none text-[#0b2c6d]">
+                    <h3 className="text-lg sm:text-xl font-bold leading-none text-[#0b2c6d]">
                       {item.value}
                     </h3>
 
-                    <p className="mt-2 text-xs text-slate-500">
+                    <p className="mt-1 sm:mt-2 text-[11px] sm:text-xs text-slate-500 leading-snug">
                       {item.label}
                     </p>
                   </div>

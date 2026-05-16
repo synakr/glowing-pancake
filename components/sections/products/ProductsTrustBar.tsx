@@ -1,13 +1,31 @@
 import SectionCard from "@/components/ui/SectionCard";
-import { ShieldCheck } from "lucide-react";
+import { BadgeCheck, Building2, FlaskConical, Globe2, Handshake, ShieldCheck } from "lucide-react";
 
 const certifications = [
-  "WHO-GMP Certified",
-  "ISO 9001:2015 Certified",
-  "GLP Compliant",
-  "FDA Approved Facility",
-  "Export Quality",
-  "Ethical Practices",
+  {
+    title: "WHO-GMP Certified",
+    icon: BadgeCheck,
+  },
+  {
+    title: "ISO 9001:2015 Certified",
+    icon: ShieldCheck,
+  },
+  {
+    title: "GLP Compliant",
+    icon: FlaskConical,
+  },
+  {
+    title: "FDA Approved Facility",
+    icon: Building2,
+  },
+  {
+    title: "Export Quality",
+    icon: Globe2,
+  },
+  {
+    title: "Ethical Practices",
+    icon: Handshake,
+  },
 ];
 
 export default function ProductsTrustBar() {
@@ -44,7 +62,7 @@ export default function ProductsTrustBar() {
               Quality You Can Trust
             </h2>
 
-            <p className="mt-4 max-w-xl text-lg leading-8 text-slate-600">
+            <p className="italic mt-4 max-w-xl text-lg leading-8 text-slate-600">
               All our products are manufactured in WHO-GMP certified
               facilities and comply with international quality standards.
             </p>
@@ -53,44 +71,47 @@ export default function ProductsTrustBar() {
 
         {/* RIGHT */}
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {certifications.map((item) => (
-            <div
-              key={item}
-              className="
-                flex
-                items-center
-                gap-4
-                rounded-2xl
-                border
-                border-slate-200
-                bg-gradient-to-b
-                from-white
-                to-slate-50
-                px-5
-                py-5
-              "
-            >
+          {certifications.map((item) => {
+            const Icon = item.icon;
+              return (
               <div
+                key={item.title}
                 className="
                   flex
-                  h-12
-                  w-12
-                  min-w-[48px]
                   items-center
-                  justify-center
-                  rounded-xl
-                  bg-cyan-50
-                  text-cyan-600
+                  gap-4
+                  rounded-2xl
+                  border
+                  border-slate-200
+                  bg-gradient-to-b
+                  from-white
+                  to-slate-50
+                  px-5
+                  py-5
                 "
               >
-                +
-              </div>
+                <div
+                  className="
+                    flex
+                    h-12
+                    w-12
+                    min-w-[48px]
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-cyan-50
+                    text-cyan-600
+                  "
+                >
+                  <Icon />
+                </div>
 
-              <p className="text-sm font-semibold leading-6 text-slate-700">
-                {item}
-              </p>
-            </div>
-          ))}
+                <p className="text-sm font-semibold leading-6 text-slate-700">
+                  {item.title}
+                </p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </SectionCard>

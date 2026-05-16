@@ -1,21 +1,26 @@
 import SectionCard from "@/components/ui/SectionCard";
+import { Brain, Droplets, HeartPulse, Microscope } from "lucide-react";
 
 const therapies = [
   {
     title: "Cardiology",
     description: "Advanced cardiovascular medicines and treatments.",
+    icon: HeartPulse,
   },
   {
     title: "Neurology",
     description: "Innovative neurological healthcare solutions.",
+    icon: Brain,
   },
   {
     title: "Oncology",
     description: "Targeted cancer therapies with precision care.",
+    icon: Microscope,
   },
   {
     title: "Diabetology",
     description: "Comprehensive diabetic treatment portfolio.",
+    icon: Droplets,
   },
 ];
 
@@ -36,7 +41,7 @@ export default function TherapeuticSection() {
             </h2>
           </div>
 
-          <p className="max-w-xl text-lg leading-8 text-slate-600">
+          <p className="italic max-w-xl text-lg leading-8 text-slate-600">
             We develop and manufacture pharmaceutical products addressing
             major global healthcare challenges with scientific excellence.
           </p>
@@ -44,42 +49,46 @@ export default function TherapeuticSection() {
 
         {/* Cards */}
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {therapies.map((item) => (
-            <div
-              key={item.title}
-              className="
-                group
-                rounded-[28px]
-                border
-                border-slate-200
-                bg-gradient-to-b
-                from-white
-                to-slate-50
-                p-7
-                transition-all
-                hover:-translate-y-1
-                hover:border-cyan-200
-                hover:shadow-xl
-              "
-            >
-              {/* Icon */}
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-100 text-2xl">
-                +
+          {therapies.map((item) =>{
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.title}
+                className="
+                  group
+                  rounded-[28px]
+                  border
+                  border-slate-200
+                  bg-gradient-to-b
+                  from-white
+                  to-slate-50
+                  p-7
+                  transition-all
+                  hover:-translate-y-1
+                  hover:border-cyan-200
+                  hover:shadow-xl
+                  duration-500 ease-out transform-gpu
+                "
+              >
+                {/* Icon */}
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-100 text-2xl">
+                  <Icon />
+                </div>
+
+                <h3 className="text-2xl font-bold text-[#0b2c6d]">
+                  {item.title}
+                </h3>
+
+                <p className="italic mt-4 leading-7 text-slate-600">
+                  {item.description}
+                </p>
+
+                <button className="mt-8 text-sm font-semibold text-cyan-600 transition group-hover:translate-x-1">
+                  Learn More →
+                </button>
               </div>
-
-              <h3 className="text-2xl font-bold text-[#0b2c6d]">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-600">
-                {item.description}
-              </p>
-
-              <button className="mt-8 text-sm font-semibold text-cyan-600 transition group-hover:translate-x-1">
-                Learn More →
-              </button>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </SectionCard>

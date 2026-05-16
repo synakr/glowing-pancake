@@ -1,4 +1,5 @@
 import { Product } from "@/data/products";
+import { Circle } from "lucide-react";
 
 type ProductCardProps = {
   product: Product;
@@ -10,10 +11,10 @@ const categoryColors: Record<string, string> = {
   Cardiology: "bg-red-50 text-red-700 border-red-100",
   Neurology: "bg-violet-50 text-violet-700 border-violet-100",
   Diabetology: "bg-blue-50 text-blue-700 border-blue-100",
-  Gastroenterology:
-    "bg-orange-50 text-orange-700 border-orange-100",
-  Respiratory:
-    "bg-cyan-50 text-cyan-700 border-cyan-100",
+  Gastroenterology: "bg-orange-50 text-orange-700 border-orange-100",
+  Respiratory: "bg-cyan-50 text-cyan-700 border-cyan-100",
+  Osteology: "bg-green-50 text-green-700 border-green-100",
+  Dermatology: "bg-pink-50 text-pink-700 border-pink-100",
 };
 
 export default function ProductCard({
@@ -111,6 +112,7 @@ export default function ProductCard({
           <div
             className="
               absolute
+              z-20
               bottom-2
               sm:bottom-3
               left-2
@@ -202,7 +204,7 @@ export default function ProductCard({
           </div>
 
           {/* Description */}
-          <p className="mt-2 sm:mt-3 md:mt-4 line-clamp-2 text-xs sm:text-[15px] leading-5 sm:leading-7 text-slate-600">
+          <p className="italic mt-2 sm:mt-3 md:mt-4 line-clamp-2 text-xs sm:text-[15px] leading-5 sm:leading-7 text-slate-600">
             {product.shortDescription}
           </p>
 
@@ -218,7 +220,7 @@ export default function ProductCard({
                     sm:rounded-xl
                     border
                     border-slate-200
-                    bg-slate-50
+                    bg-cyan-50
                     px-2
                     sm:px-3
                     py-1

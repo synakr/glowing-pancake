@@ -70,7 +70,7 @@ export default function ProductsHero() {
             Brighter Tomorrow.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-xl leading-9 text-slate-600">
+          <p className="italic mt-6 max-w-2xl text-xl leading-9 text-slate-600">
             Discover our wide range of high-quality pharmaceutical formulations
             developed with science, care and precision.
           </p>
@@ -88,12 +88,12 @@ export default function ProductsHero() {
                   key={item.label}
                   className={`
                     flex
-                    min-w-[170px]
+                    min-w-[120px] sm:min-w-[150px] md:min-w-[170px]
                     flex-col
                     items-center
                     justify-center
-                    px-8
-                    py-10
+                    px-4 sm:px-6 md:px-8
+                    py-6 sm:py-8 md:py-10
                     text-center
                     ${
                       index !== stats.length - 1
@@ -105,32 +105,31 @@ export default function ProductsHero() {
                   {/* Icon */}
                   <div
                     className="
-                      mb-4
+                      mb-3 sm:mb-4
                       flex
-                      h-14
-                      w-14
+                      h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14
                       items-center
                       justify-center
-                      rounded-2xl
+                      rounded-xl sm:rounded-2xl
                       bg-cyan-50
                       text-cyan-600
                     "
                   >
-                    <Icon className="h-6 w-6" />
+                    <Icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
                   </div>
 
                   {/* Value */}
-                  <h3 className="text-4xl font-bold text-[#0b2c6d]">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0b2c6d]">
                     {item.value}
                   </h3>
 
                   {/* Label */}
-                  <p className="mt-3 text-sm font-medium text-slate-500">
+                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm font-medium text-slate-500 leading-snug">
                     {item.label}
                   </p>
 
                   {/* Bottom Accent */}
-                  <div className="mt-4 h-1 w-10 rounded-full bg-cyan-500" />
+                  <div className="mt-3 sm:mt-4 h-1 w-8 sm:w-10 rounded-full bg-cyan-500" />
                 </div>
               );
             })}

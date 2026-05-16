@@ -1,29 +1,29 @@
-import SectionCard from "@/components/ui/SectionCard";
+"use client";
 
-const products = [
-  {
-    name: "CardioPlus",
-    category: "Cardiology",
-    image: "/products/product-1.png",
-  },
-  {
-    name: "NeuroVex",
-    category: "Neurology",
-    image: "/products/product-2.png",
-  },
-  {
-    name: "GlucoFine",
-    category: "Diabetology",
-    image: "/products/product-3.png",
-  },
-  {
-    name: "GlucscsaoFine",
-    category: "Diabcasdcasetology",
-    image: "/products/product-3.png",
-  },
-];
+import { useRouter } from "next/navigation";
+import SectionCard from "@/components/ui/SectionCard";
+import { products } from "@/data/products";
+
+// const products = [
+//   {
+//     name: "CardioPlus",
+//     category: "Cardiology",
+//     image: "/products/product-1.png",
+//   },
+//   {
+//     name: "NeuroVex",
+//     category: "Neurology",
+//     image: "/products/product-2.png",
+//   },
+//   {
+//     name: "GlucoFine",
+//     category: "Diabetology",
+//     image: "/products/product-3.png",
+//   },
+// ];
 
 export default function ProductsSection() {
+  const router = useRouter();
   return (
     <SectionCard className="overflow-hidden p-6 md:p-8">
       <div className="space-y-10">
@@ -40,7 +40,7 @@ export default function ProductsSection() {
             </h2>
           </div>
 
-          <button className="w-fit rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-cyan-400">
+          <button onClick={() => router.push("/products")} className="w-fit rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-cyan-400">
             View All Products
           </button>
         </div>
@@ -53,28 +53,29 @@ export default function ProductsSection() {
               className="
                 group
                 overflow-hidden
-                rounded-[32px]
+                rounded-4xl
                 border
                 border-slate-200
                 bg-white
                 transition-all
                 hover:-translate-y-1
                 hover:shadow-2xl
+                duration-800 ease-out transform-gpu
               "
             >
               {/* Image Area */}
-              <div className="relative flex h-[320px] items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-50 via-blue-50 to-slate-100 p-8">
+              <div className="relative flex h-80 items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-50 via-blue-50 to-slate-100 p-8">
                 
                 {/* Blur */}
                 <div className="absolute h-52 w-52 rounded-full bg-cyan-200/40 blur-3xl" />
 
                 <img
-                  src={product.image}
+                  src={product.images[0]}
                   alt={product.name}
                   className="
                     relative
                     z-10
-                    h-[260px]
+                    h-65
                     object-contain
                     transition-transform
                     duration-500
