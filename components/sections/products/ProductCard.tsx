@@ -1,5 +1,6 @@
 import { Product } from "@/data/products";
 import { Circle } from "lucide-react";
+import Link from "next/link";
 
 type ProductCardProps = {
   product: Product;
@@ -136,7 +137,7 @@ export default function ProductCard({
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="flex flex-1 flex-col w-full md:w-auto">
+        <div className="flex flex-1 flex-col min-w-0 w-full md:w-auto">
           
           {/* Top */}
           <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between gap-2 sm:gap-3">
@@ -204,7 +205,21 @@ export default function ProductCard({
           </div>
 
           {/* Description */}
-          <p className="italic mt-2 sm:mt-3 md:mt-4 line-clamp-2 text-xs sm:text-[15px] leading-5 sm:leading-7 text-slate-600">
+          <p
+            className="
+              italic
+              mt-2
+              sm:mt-3
+              md:mt-4
+              line-clamp-2
+              break-words
+              text-xs
+              sm:text-[15px]
+              leading-5
+              sm:leading-7
+              text-slate-600
+            "
+          >
             {product.shortDescription}
           </p>
 
@@ -250,36 +265,71 @@ export default function ProductCard({
             </div>
 
             {/* CTA */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
+            <div className="flex items-center gap-2">
+              
+              {/* Quick View */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onOpen();
+                }}
+                className="
+                  cursor-pointer
+                  flex
+                  items-center
+                  justify-center
+                  gap-1.5
+                  sm:gap-2
+                  rounded-full
+                  border
+                  border-slate-200
+                  bg-white
+                  px-3
+                  sm:px-4
+                  py-2
+                  sm:py-2.5
+                  text-xs
+                  sm:text-sm
+                  font-semibold
+                  text-slate-700
+                  transition-all
+                  hover:border-cyan-300
+                  hover:text-cyan-700
+                  whitespace-nowrap
+                "
+              >
+                Quick View
+              </button>
 
-                onOpen();
-              }}
-              className="
-                flex
-                items-center
-                justify-center
-                gap-1.5
-                sm:gap-2
-                rounded-full
-                bg-cyan-50
-                px-3
-                sm:px-4
-                py-2
-                sm:py-2.5
-                text-xs
-                sm:text-sm
-                font-semibold
-                text-cyan-700
-                transition-all
-                hover:bg-cyan-100
-                group-hover:translate-x-1
-                whitespace-nowrap
-              "
-            >
-              View Details →
-            </button>
+              {/* Product Page */}
+              <Link
+                href={`/products/${product.slug}`}
+                onClick={(e) => e.stopPropagation()}
+                className="
+                  flex
+                  items-center
+                  justify-center
+                  gap-1.5
+                  sm:gap-1
+                  rounded-xl
+                  bg-cyan-600
+                  px-3
+                  sm:px-4
+                  py-2
+                  sm:py-2.5
+                  text-xs
+                  sm:text-sm
+                  font-semibold
+                  text-white
+                  hover:bg-cyan-700
+                  hover:shadow-lg
+                  hover:shadow-cyan-500/20
+                  whitespace-nowrap
+                "
+              >
+                Learn More →
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -231,7 +231,7 @@ export const products: Product[] = [
   {
     id: "itrazole-01",
 
-    slug: "itraazol-200 Capsule",
+    slug: "itraazol-200-Capsule",
 
     status: "active",
 
