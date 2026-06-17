@@ -16,8 +16,103 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Al Hiraj Pharma",
-  description: "Modern Pharmaceutical Company Website",
+  metadataBase: new URL(
+    "https://alhirajpharma.in"
+  ),
+
+  title: {
+    default:
+      "Al Hiraj Pharmaceuticals",
+    template:
+      "%s | Al Hiraj Pharmaceuticals",
+  },
+
+  applicationName:
+    "Al Hiraj Pharmaceuticals",
+
+  description:
+  "Al Hiraj Pharmaceuticals is a Bengaluru-based pharmaceutical company engaged in pharmaceutical marketing, third-party manufacturing, contract manufacturing, and distribution of quality healthcare products across India.",
+
+  keywords: [
+    "Al Hiraj Pharmaceuticals",
+    "Al Hiraj Pharma",
+    "Al Hiraj Distributors",
+    "Pharmaceutical Company Bangalore",
+    "Pharmaceutical Company Bengaluru",
+    "Pharma Marketing Company",
+    "Third Party Manufacturing",
+    "Contract Manufacturing",
+    "Medicine Supplier Karnataka",
+    "Healthcare Products",
+  ],
+
+  authors: [
+    {
+      name:
+        "Al Hiraj Pharmaceuticals",
+    },
+  ],
+
+  creator:
+    "Al Hiraj Pharmaceuticals",
+
+  publisher:
+    "Al Hiraj Pharmaceuticals",
+
+  category: "Healthcare",
+
+  alternates: {
+    canonical:
+      "https://alhirajpharma.in",
+  },
+
+  verification: {
+    google: "",
+  },
+
+  openGraph: {
+    title:
+      "Al Hiraj Pharmaceuticals",
+
+    description:
+      "Trusted pharmaceutical marketing and healthcare solutions company based in Bengaluru.",
+
+    url:
+      "https://alhirajpharma.in",
+
+    siteName:
+      "Al Hiraj Pharmaceuticals",
+
+    locale: "en_IN",
+
+    type: "website",
+  },
+
+  twitter: {
+    card:
+      "summary_large_image",
+
+    title:
+      "Al Hiraj Pharmaceuticals",
+
+    description:
+      "Trusted pharmaceutical marketing and healthcare solutions company based in Bengaluru.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview":
+        "large",
+      "max-snippet": -1,
+      "max-video-preview":
+        -1,
+    },
+  },
 };
 
 export default function RootLayout({
