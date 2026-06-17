@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/layout/navbar/Navbar";
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -132,6 +133,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-[#f5f7fb] text-slate-900">
         
+        <OrganizationSchema />
         {/* Global Navbar */}
         <Navbar />
 
