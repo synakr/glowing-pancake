@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Navbar from "@/components/layout/navbar/Navbar";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import FooterSection from "@/components/sections/home/footer/FooterSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     "Al Hiraj Pharmaceuticals",
 
   description:
-  "Al Hiraj Pharmaceuticals is a Bengaluru-based pharmaceutical company engaged in pharmaceutical marketing, third-party manufacturing, contract manufacturing, and distribution of quality healthcare products across India.",
+    "Al Hiraj Pharmaceuticals is a Bengaluru-based pharmaceutical company engaged in pharmaceutical marketing, third-party manufacturing, contract manufacturing, and distribution of quality healthcare products across India.",
 
   keywords: [
     "Al Hiraj Pharmaceuticals",
@@ -124,6 +125,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`
         ${geistSans.variable}
         ${geistMono.variable}
@@ -131,16 +133,23 @@ export default function RootLayout({
         antialiased
       `}
     >
-      <body className="min-h-screen bg-[#f5f7fb] text-slate-900">
+      <body className="flex min-h-screen flex-col bg-[#f5f7fb] text-slate-900">
         
         <OrganizationSchema />
+
         {/* Global Navbar */}
         <Navbar />
 
         {/* Main Content */}
-        <div className="flex-1 pt-6">
+        <main className="flex-1 pt-6">
           {children}
+        </main>
+
+        {/* Global Footer */}
+        <div className="mt-8 px-4 pb-4 md:px-6 md:pb-6">
+          <FooterSection />
         </div>
+
       </body>
     </html>
   );

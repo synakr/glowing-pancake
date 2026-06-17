@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Leaf, Menu, TreePalm, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -42,11 +43,16 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex items-center gap-3">
               <Link href="/">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700">
-                  <Leaf />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-100">
+                  <Image
+                    src="/logo2.png"
+                    alt="Al Hiraj Pharmaceuticals"
+                    width={52}
+                    height={52}
+                    className="h-12 w-12 object-contain"
+                  />
                 </div>
               </Link>
-
               <div>
                 <h2 className="text-xl font-bold text-[#0b2c6d]">
                   AL HIRAJ
@@ -137,24 +143,32 @@ export default function Navbar() {
 
             {/* CTA */}
             <button
-              className="
-                hidden
-                md:flex
-                items-center
-                gap-2
-                rounded-full
-                bg-[#0b2c6d]
-                px-6
-                py-3
-                text-sm
-                font-semibold
-                text-white
-                transition
-                hover:scale-[1.02]
-              "
-            >
-              Get in Touch →
-            </button>
+  onClick={() => {
+    document
+      .getElementById("contact-section")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  }}
+  className="
+    hidden
+    md:flex
+    items-center
+    gap-2
+    rounded-full
+    bg-[#0b2c6d]
+    px-6
+    py-3
+    text-sm
+    font-semibold
+    text-white
+    transition
+    hover:scale-[1.02]
+  "
+>
+  Get in Touch →
+</button>
           </div>
 
           {/* Mobile Menu */}

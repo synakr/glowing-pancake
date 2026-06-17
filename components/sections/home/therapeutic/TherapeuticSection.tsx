@@ -1,26 +1,35 @@
 import SectionCard from "@/components/ui/SectionCard";
 import { Brain, Droplets, HeartPulse, Microscope } from "lucide-react";
+import Link from "next/link";
 
 const therapies = [
   {
     title: "Cardiology",
-    description: "Advanced cardiovascular medicines and treatments.",
+    description:
+      "Advanced cardiovascular medicines and treatments.",
     icon: HeartPulse,
+    href: "https://en.wikipedia.org/wiki/Cardiology",
   },
   {
     title: "Neurology",
-    description: "Innovative neurological healthcare solutions.",
+    description:
+      "Innovative neurological healthcare solutions.",
     icon: Brain,
+    href: "https://en.wikipedia.org/wiki/Neurology",
   },
   {
     title: "Oncology",
-    description: "Targeted cancer therapies with precision care.",
+    description:
+      "Targeted cancer therapies with precision care.",
     icon: Microscope,
+    href: "https://en.wikipedia.org/wiki/Oncology",
   },
   {
     title: "Diabetology",
-    description: "Comprehensive diabetic treatment portfolio.",
+    description:
+      "Comprehensive diabetic treatment portfolio.",
     icon: Droplets,
+    href: "https://en.wikipedia.org/wiki/Diabetology",
   },
 ];
 
@@ -83,9 +92,22 @@ export default function TherapeuticSection() {
                   {item.description}
                 </p>
 
-                <button className="mt-8 text-sm font-semibold text-cyan-600 transition group-hover:translate-x-1">
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    mt-8
+                    inline-flex
+                    text-sm
+                    font-semibold
+                    text-cyan-600
+                    transition
+                    group-hover:translate-x-1
+                  "
+                >
                   Learn More →
-                </button>
+                </Link>
               </div>
             );
           })}

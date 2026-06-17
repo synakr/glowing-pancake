@@ -2,20 +2,20 @@ import SectionCard from "@/components/ui/SectionCard";
 
 const stats = [
   {
-    value: "25+",
-    label: "Years of Excellence",
+    value: "WHO-GMP",
+    label: "Quality Manufacturing Standards",
   },
   {
-    value: "150+",
-    label: "Pharmaceutical Products",
+    value: "ISO",
+    label: "Quality Management Systems",
   },
   {
-    value: "50+",
-    label: "Global Markets",
+    value: "R&D",
+    label: "Research Driven Development",
   },
   {
-    value: "10M+",
-    label: "Lives Impacted",
+    value: "Ethics",
+    label: "Patient-Centric Healthcare",
   },
 ];
 
@@ -25,7 +25,7 @@ export default function AboutSection() {
       <div className="grid gap-8 lg:grid-cols-2">
         
         {/* LEFT */}
-        <div className="relative overflow-hidden rounded-4xl bg-blue-500 p-8 text-white">
+        <div className="relative overflow-hidden rounded-[32px] bg-[#0b2c6d] p-8 text-white">
           
           {/* Glow */}
           <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl" />
@@ -36,32 +36,57 @@ export default function AboutSection() {
             </p>
 
             <h2 className="max-w-xl text-4xl font-bold leading-tight">
-              Driven By Innovation, Quality & Global Healthcare Impact
+              Committed To Quality, Innovation & Better Healthcare
             </h2>
 
-            <p className="italic mt-6 max-w-xl text-lg leading-8 text-blue-100">
-              We are committed to advancing pharmaceutical excellence through
-              cutting-edge research, world-class manufacturing, and ethical
-              healthcare solutions.
+            <p className="mt-6 max-w-xl italic text-lg leading-8 text-blue-100">
+              Al Hiraj Pharmaceuticals is dedicated to delivering
+              high-quality pharmaceutical products through innovation,
+              regulatory compliance, ethical practices, and a strong
+              commitment to patient well-being.
             </p>
 
             {/* Features */}
-            <div className="mt-10 space-y-5">
+            <div className="mt-10 space-y-4">
               {[
                 "WHO-GMP Certified Manufacturing",
-                "Global Regulatory Compliance",
+                "Quality & Regulatory Compliance",
                 "Research Driven Innovation",
                 "Patient-Centric Healthcare Solutions",
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur"
+                  className="
+                    flex
+                    items-center
+                    gap-4
+                    rounded-2xl
+                    border
+                    border-white/10
+                    bg-white/10
+                    px-5
+                    py-4
+                    backdrop-blur
+                  "
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-300/20">
+                  <div
+                    className="
+                      flex
+                      h-10
+                      w-10
+                      items-center
+                      justify-center
+                      rounded-xl
+                      bg-cyan-300/20
+                      text-cyan-200
+                    "
+                  >
                     ✓
                   </div>
 
-                  <p className="font-medium">{item}</p>
+                  <p className="font-medium">
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>
@@ -72,19 +97,35 @@ export default function AboutSection() {
         <div className="flex flex-col gap-6">
           
           {/* Image */}
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-100 to-cyan-50 p-6">
-            
+          <div
+            className="
+              relative
+              overflow-hidden
+              rounded-[32px]
+              bg-gradient-to-br
+              from-slate-100
+              to-cyan-50
+              p-6
+            "
+          >
             <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-cyan-200/40 blur-3xl" />
 
             <img
               src="/lab.png"
               alt="Laboratory"
-              className="relative z-10 h-[360px] w-full rounded-3xl object-cover"
+              className="
+                relative
+                z-10
+                h-[360px]
+                w-full
+                rounded-3xl
+                object-cover
+              "
             />
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6">
+          {/* Trust Signals */}
+          <div className="grid grid-cols-2 gap-5">
             {stats.map((item) => (
               <div
                 key={item.label}
@@ -95,20 +136,24 @@ export default function AboutSection() {
                   bg-gradient-to-b
                   from-white
                   to-slate-50
-                  p-7
+                  p-6
+                  transition-all
+                  hover:-translate-y-0.5
+                  hover:shadow-md
                 "
               >
-                <h3 className="text-3xl font-bold text-[#0b2c6d]">
+                <h3 className="text-2xl font-bold text-[#0b2c6d]">
                   {item.value}
                 </h3>
 
-                <p className="text-sm text-slate-600">
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   {item.label}
                 </p>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </SectionCard>
   );

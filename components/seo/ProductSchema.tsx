@@ -33,6 +33,15 @@ export default function ProductSchema({
       name: "Al Hiraj Pharmaceuticals",
     },
 
+    offers: {
+      "@type": "Offer",
+
+      url: `https://alhirajpharma.in/products/${product.slug}`,
+
+      availability:
+        "https://schema.org/InStock",
+    },
+
     additionalProperty: [
       {
         "@type": "PropertyValue",

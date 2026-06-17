@@ -1,5 +1,6 @@
 import Container from "@/components/layout/Container";
 import AboutSection from "@/components/sections/home/about/AboutSection";
+import ContactSection from "@/components/sections/home/contact/ContactSection";
 import CTASection from "@/components/sections/home/cta/CTASection";
 import FooterSection from "@/components/sections/home/footer/FooterSection";
 import HeroSection from "@/components/sections/home/hero/HeroSection";
@@ -15,7 +16,7 @@ export default function HomePage() {
       <ProductsSection />
       <AboutSection />
       <CTASection />
-      <FooterSection />
+      <ContactSection />
     </Container>
   </main>
   );

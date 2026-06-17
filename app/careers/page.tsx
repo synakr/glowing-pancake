@@ -1,10 +1,18 @@
-import ComingSoonPage from "@/components/shared/ComingSoonPage";
+import Container from "@/components/layout/Container";
+import CareersHero from "@/components/sections/careers/CareersHero";
+import RecruitmentForm from "@/components/sections/careers/RecruitmentForm";
+import WhyJoinUs from "@/components/sections/careers/WhyJoinUs";
+
 
 export default function CareersPage() {
   return (
-    <ComingSoonPage
-      title="Careers"
-      description="Join our growing pharmaceutical team and build a meaningful career with us."
-    />
+
+    <main className="min-h-screen bg-[#f5f7fb] py-6">
+      <Container className="space-y-6">
+        <CareersHero />
+        <RecruitmentForm />
+        <WhyJoinUs />
+      </Container>
+    </main>
   );
 }

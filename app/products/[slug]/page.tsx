@@ -25,16 +25,30 @@ export async function generateMetadata({
   }
 
   return {
-    title: product.name,
+    title: `${product.name} | ${product.genericName} | Al Hiraj Pharmaceuticals`,
 
-    description:
-      product.shortDescription,
+    description: `${product.name} is a ${product.genericName} ${product.dosageForm.toLowerCase()} developed by Al Hiraj Pharmaceuticals for ${product.therapeuticSegment.toLowerCase()}. ${product.shortDescription}`,
+
+    keywords: [
+      product.name,
+      product.genericName,
+      product.category,
+      product.therapeuticSegment,
+      product.dosageForm,
+      "Al Hiraj Pharmaceuticals",
+      "Pharmaceutical Products",
+      "Healthcare Solutions",
+      ...product.indications,
+    ],
 
     openGraph: {
-      title: product.name,
+      title: `${product.name} | Al Hiraj Pharmaceuticals`,
 
-      description:
-        product.shortDescription,
+      description: product.shortDescription,
+
+      url: `https://alhirajpharma.in/products/${product.slug}`,
+
+      type: "website",
 
       images: [
         {

@@ -75,9 +75,9 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "corcium-01",
+    id: "korsium-01",
 
-    slug: "corcium-tablet",
+    slug: "korsium-bt-coral-calcium-calcium-carbonate",
 
     status: "active",
 
@@ -148,9 +148,9 @@ export const products: Product[] = [
     },
   },
   {
-    id: "nutrajoint-01",
+    id: "neutajoint-c-01",
 
-    slug: "nutrajoint-capsule",
+    slug: "neutajoint-c-boswellia-rosehip-curcuma",
 
     status: "active",
 
@@ -229,13 +229,13 @@ export const products: Product[] = [
     },
   },
   {
-    id: "itrazole-01",
+    id: "itraazol-01",
 
-    slug: "itraazol-200-Capsule",
+    slug: "itraazol-200-itraconazole",
 
     status: "active",
 
-    name: "Itrazole 200 Capsule",
+    name: "Itrazole-200",
 
     genericName: "Itraconazole",
 
@@ -296,11 +296,11 @@ export const products: Product[] = [
     },
   },
   {
-    id: "billargic-m-01",
+    id: "bilargi-m-01",
 
-    slug: "billargic-m-tablet",
+    slug: "bilargi-m-bilastine-montelukast",
 
-    status: "discontinued",
+    status: "active",
 
     name: "Bilargi-M Tablet",
 
@@ -368,13 +368,13 @@ export const products: Product[] = [
     },
   },
   {
-    id: "itazole-100-01",
+    id: "itaazol-100-01",
 
-    slug: "itazole-100mg-capsule",
+    slug: "itaazol-100-itraconazole",
 
     status: "active",
 
-    name: "Itaazol 100mg Capsule",
+    name: "Itraazol-100",
 
     genericName: "Itraconazole",
 

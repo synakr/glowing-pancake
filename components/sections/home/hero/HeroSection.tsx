@@ -1,5 +1,5 @@
 import SectionCard from "@/components/ui/SectionCard";
-import { ArrowRight, Minus, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight, HeartHandshake, Minus, ShieldCheck, Stethoscope, Users } from "lucide-react";
 import {
   CalendarDays,
   Pill,
@@ -42,14 +42,14 @@ export default function HeroSection() {
             {/* CTA */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link href={"/products"}>
-                <button className="flex items-center gap-2 rounded-full bg-[#0b2c6d] px-6 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]">
+                <button className="cursor-pointer flex items-center gap-2 rounded-full bg-[#0b2c6d] px-6 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]">
                   Explore Products
                   <ArrowRight className="h-4 w-4" />
                 </button>              
               </Link>
 
               <Link href={"/about"}>
-                <button className="rounded-full border border-slate-300 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-cyan-400">
+                <button className="cursor-pointer rounded-full border border-slate-300 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-cyan-400">
                   Learn More About Us
                 </button>              
               </Link>
@@ -57,22 +57,22 @@ export default function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 sm:gap-4">
             {[
               {
-                value: "25+",
-                label: "Years of Experience",
-                icon: CalendarDays,
+                value: "WHO-GMP",
+                label: "Standards",
+                icon: ShieldCheck,
               },
               {
-                value: "150+",
-                label: "Products",
-                icon: PillBottle,
+                value: "100+",
+                label: "Doctors Connected",
+                icon: Stethoscope,
               },
               {
-                value: "50+",
-                label: "Countries",
-                icon: Globe,
+                value: "24/7",
+                label: "Commitment",
+                icon: HeartHandshake,
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -83,27 +83,42 @@ export default function HeroSection() {
                   className="
                     flex
                     items-center
-                    gap-3 sm:gap-4
-                    rounded-xl sm:rounded-2xl
+                    gap-4
+                    rounded-2xl
                     border
                     border-white/70
-                    bg-white
-                    p-3 sm:p-4
+                    bg-white/90
+                    p-4
+                    backdrop-blur-sm
                     shadow-sm
+                    transition-all
+                    hover:-translate-y-0.5
+                    hover:shadow-md
                   "
                 >
-                  {/* Left Column */}
-                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-cyan-100">
-                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-cyan-700" />
+                  {/* Icon */}
+                  <div
+                    className="
+                      flex
+                      h-12
+                      w-12
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-2xl
+                      bg-cyan-100
+                    "
+                  >
+                    <Icon className="h-6 w-6 text-cyan-700" />
                   </div>
 
-                  {/* Right Column */}
+                  {/* Content */}
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold leading-none text-[#0b2c6d]">
+                    <h3 className="text-xl font-bold leading-none text-[#0b2c6d]">
                       {item.value}
                     </h3>
 
-                    <p className="mt-1 sm:mt-2 text-[11px] sm:text-xs text-slate-500 leading-snug">
+                    <p className="mt-1 text-xs leading-relaxed text-slate-500">
                       {item.label}
                     </p>
                   </div>
