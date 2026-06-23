@@ -8,20 +8,20 @@ import {
 
 const stats = [
   {
-    value: "500+",
-    label: "Quality Products",
+    value: "6+",
+    label: "Product Formulations",
     icon: Pill,
   },
 
   {
-    value: "50+",
-    label: "Countries Served",
+    value: "7+",
+    label: "Therapeutic Segments",
     icon: Earth,
   },
 
   {
-    value: "20+",
-    label: "Years of Excellence",
+    value: "100%",
+    label: "Quality Commitment",
     icon: Award,
   },
 ];

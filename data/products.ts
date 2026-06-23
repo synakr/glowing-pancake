@@ -1,11 +1,14 @@
-export type ProductCategory =
+type ProductCategory =
   | "Cardiology"
   | "Neurology"
   | "Diabetology"
   | "Respiratory"
   | "Gastroenterology"
-  | "Osteology"
-  | "Dermatology";
+  | "Dermatology"
+  | "Orthopedics"
+  | "Nutrition"
+  | "Anti-Infectives"
+  | "General Medicine";
 
 export type Product = {
   id: string;
@@ -85,7 +88,7 @@ export const products: Product[] = [
 
     genericName: "Coral Calcium + Calcium Carbonate",
 
-    category: "Osteology",
+    category: "Orthopedics",
 
     therapeuticSegment: "Bone & Joint Care",
 
@@ -159,7 +162,7 @@ export const products: Product[] = [
     genericName:
       "Boswellia Serrata Extract + Rosehip Extract + Curcuma Longa Extract",
 
-    category: "Osteology",
+    category: "Orthopedics",
 
     therapeuticSegment: "Joint & Mobility Care",
 
@@ -235,7 +238,7 @@ export const products: Product[] = [
 
     status: "active",
 
-    name: "Itrazole-200",
+    name: "Itraazol-200",
 
     genericName: "Itraconazole",
 
@@ -368,9 +371,9 @@ export const products: Product[] = [
     },
   },
   {
-    id: "itaazol-100-01",
+    id: "itraazol-100-01",
 
-    slug: "itaazol-100-itraconazole",
+    slug: "itraazol-100-itraconazole",
 
     status: "active",
 
@@ -432,6 +435,146 @@ export const products: Product[] = [
         "Avoid self-medication",
         "Store away from sunlight and moisture",
         "Consult doctor during pregnancy or liver conditions",
+      ],
+    },
+  },
+  {
+    id: "lulipin-cream-01",
+
+    slug: "lulipin-cream",
+
+    status: "active",
+
+    name: "Lulipin Cream",
+
+    genericName: "Luliconazole",
+
+    category: "Respiratory",
+
+    therapeuticSegment: "Dermatology & Anti-Fungal Care",
+
+    dosageForm: "Topical Cream",
+
+    prescriptionRequired: true,
+
+    images: ["/products/lulipin-1.png", "/products/lulipin-2.png"],
+
+    shortDescription:
+      "Topical antifungal cream formulated to help manage fungal skin infections including ringworm, athlete's foot, and jock itch.",
+
+    composition: [
+      {
+        ingredient: "Luliconazole",
+        strength: "1% w/w",
+      },
+    ],
+
+    indications: [
+      "Fungal Skin Infections",
+      "Athlete's Foot",
+      "Ringworm",
+      "Jock Itch",
+      "Skin Irritation Caused by Fungal Infection",
+    ],
+
+    keyHighlights: [
+      "Helps eliminate infection-causing fungi",
+      "Provides relief from itching and irritation",
+      "Supports healthy skin recovery",
+      "Easy topical application",
+      "Designed for targeted fungal treatment",
+    ],
+
+    packaging: "10g Tube",
+
+    storage: "Store below 30°C in a cool and dry place",
+
+    certifications: ["WHO-GMP Certified", "ISO Certified"],
+
+    details: {
+      introduction:
+        "Lulipin Cream is a topical antifungal formulation developed to help manage common fungal skin infections by targeting and eliminating infection-causing fungi.",
+
+      dosageInstructions:
+        "Apply a thin layer to the affected area as directed by a healthcare professional.",
+
+      safetyInformation: [
+        "For external use only",
+        "Avoid contact with eyes, nose, and mouth",
+        "Keep out of reach of children",
+        "Store in a cool and dry place",
+        "Use under medical supervision",
+      ],
+    },
+  },
+  {
+    id: "telvion-h-01",
+
+    slug: "telvion-h-40mg-12-5mg-tablet",
+
+    status: "active",
+
+    name: "Telvion-H 40",
+
+    genericName: "Telmisartan + Hydrochlorothiazide",
+
+    category: "Cardiology",
+
+    therapeuticSegment: "Cardiovascular Care",
+
+    dosageForm: "Tablet",
+
+    prescriptionRequired: true,
+
+    images: ["/products/telvion-h-1.png", "/products/telvion-h-2.png"],
+
+    shortDescription:
+      "Combination antihypertensive formulation designed to support effective blood pressure management and cardiovascular health.",
+
+    composition: [
+      {
+        ingredient: "Telmisartan",
+        strength: "40mg",
+      },
+      {
+        ingredient: "Hydrochlorothiazide",
+        strength: "12.5mg",
+      },
+    ],
+
+    indications: [
+      "Hypertension Management",
+      "Blood Pressure Control",
+      "Cardiovascular Risk Reduction",
+    ],
+
+    keyHighlights: [
+      "Dual-action blood pressure control",
+      "Supports long-term cardiovascular health",
+      "Helps reduce risk of stroke and heart attack",
+      "Once-daily convenient formulation",
+      "Clinically established combination therapy",
+    ],
+
+    packaging: "1 Strip of 15 Tablets",
+
+    storage: "Store below 30°C in a cool and dry place",
+
+    certifications: ["WHO-GMP Certified", "ISO Certified"],
+
+    details: {
+      introduction:
+        "Telvion H 40mg/12.5mg Tablet combines Telmisartan and Hydrochlorothiazide to provide effective management of hypertension when monotherapy alone is insufficient.",
+
+      dosageInstructions:
+        "Take as directed by a healthcare professional. Can be taken with or without food.",
+
+      safetyInformation: [
+        "Use under medical supervision",
+        "Monitor blood pressure regularly",
+        "Avoid use during pregnancy unless advised by a physician",
+        "Store away from moisture and direct sunlight",
+        "Keep out of reach of children",
       ],
     },
   },
