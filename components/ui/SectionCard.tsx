@@ -13,7 +13,7 @@ export default function SectionCard({
         bg-white
         border
         border-slate-200/80
-        rounded-[32px]
+        rounded-4xl
         shadow-sm
         ${className}
       `}

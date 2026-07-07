@@ -1,43 +1,29 @@
-import SectionCard from "@/components/ui/SectionCard";
-import { Brain, Droplets, HeartPulse, Microscope } from "lucide-react";
 import Link from "next/link";
+import {
+  Activity,
+  Bone,
+  HeartPulse,
+  Leaf,
+  Pill,
+  Wind,
+} from "lucide-react";
 
-const therapies = [
-  {
-    title: "Cardiology",
-    description:
-      "Advanced cardiovascular medicines and treatments.",
-    icon: HeartPulse,
-    href: "https://en.wikipedia.org/wiki/Cardiology",
-  },
-  {
-    title: "Neurology",
-    description:
-      "Innovative neurological healthcare solutions.",
-    icon: Brain,
-    href: "https://en.wikipedia.org/wiki/Neurology",
-  },
-  {
-    title: "Oncology",
-    description:
-      "Targeted cancer therapies with precision care.",
-    icon: Microscope,
-    href: "https://en.wikipedia.org/wiki/Oncology",
-  },
-  {
-    title: "Diabetology",
-    description:
-      "Comprehensive diabetic treatment portfolio.",
-    icon: Droplets,
-    href: "https://en.wikipedia.org/wiki/Diabetology",
-  },
-];
+import SectionCard from "@/components/ui/SectionCard";
+import { therapeutic } from "@/data/therapeutic";
+
+const icons = {
+  cardiovascular: HeartPulse,
+  "allergy-respiratory": Wind,
+  "anti-fungal": Pill,
+  "bone-joint": Bone,
+  "joint-mobility": Activity,
+  "dermatology-antifungal": Leaf,
+} as const;
 
 export default function TherapeuticSection() {
   return (
     <SectionCard className="p-6 md:p-8">
       <div className="flex flex-col gap-10">
-        
         {/* Top */}
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -50,19 +36,24 @@ export default function TherapeuticSection() {
             </h2>
           </div>
 
-          <p className="italic max-w-xl text-lg leading-8 text-slate-600">
-            We develop and manufacture pharmaceutical products addressing
-            major global healthcare challenges with scientific excellence.
+          <p className="max-w-xl text-lg italic leading-8 text-slate-600">
+            Explore our specialized therapeutic portfolio developed to support
+            diverse healthcare needs with high-quality pharmaceutical
+            formulations.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {therapies.map((item) =>{
-            const Icon = item.icon;
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {therapeutic.map((item) => {
+            const Icon =
+              icons[item.slug as keyof typeof icons] ??
+              Pill;
+
             return (
-              <div
-                key={item.title}
+              <Link
+                key={item.slug}
+                href={`/therapeutic/${item.slug}`}
                 className="
                   group
                   rounded-[28px]
@@ -73,29 +64,25 @@ export default function TherapeuticSection() {
                   to-slate-50
                   p-7
                   transition-all
+                  duration-500
                   hover:-translate-y-1
                   hover:border-cyan-200
                   hover:shadow-xl
-                  duration-500 ease-out transform-gpu
                 "
               >
-                {/* Icon */}
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-100 text-2xl">
-                  <Icon />
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-100">
+                  <Icon className="h-8 w-8 text-cyan-700" />
                 </div>
 
                 <h3 className="text-2xl font-bold text-[#0b2c6d]">
                   {item.title}
                 </h3>
 
-                <p className="italic mt-4 leading-7 text-slate-600">
-                  {item.description}
+                <p className="mt-4 italic leading-7 text-slate-600">
+                  {item.shortDescription}
                 </p>
 
-                <Link
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <span
                   className="
                     mt-8
                     inline-flex
@@ -106,9 +93,9 @@ export default function TherapeuticSection() {
                     group-hover:translate-x-1
                   "
                 >
-                  Learn More →
-                </Link>
-              </div>
+                  Explore →
+                </span>
+              </Link>
             );
           })}
         </div>

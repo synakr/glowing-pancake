@@ -81,7 +81,7 @@ export default function ContactSection() {
                 <Phone className="h-4 w-4" />
 
                 <span className="text-sm">
-                  +91 XXXXX XXXXX
+                  +91 81190 29977
                 </span>
               </div>
 
@@ -89,7 +89,7 @@ export default function ContactSection() {
                 <Mail className="h-4 w-4" />
 
                 <span className="text-sm">
-                  contact@alhirajpharma.in
+                  alhirajpharmaceuticals@gmail.com
                 </span>
               </div>
             </div>

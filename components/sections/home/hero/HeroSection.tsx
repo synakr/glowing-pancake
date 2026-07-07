@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-// new exact text here
 
 export default function HeroSection() {
   return (

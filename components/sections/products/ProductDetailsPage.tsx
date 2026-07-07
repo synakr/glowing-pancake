@@ -14,6 +14,7 @@ import {
   Sparkles,
   CheckCircle2,
 } from "lucide-react";
+import RelatedProducts from "./RelatedProducts";
 
 type Props = {
   product: Product;
@@ -331,6 +332,8 @@ export default function ProductDetailsPage({
           </div>
         </section>
       </div>
+
+      <RelatedProducts currentProduct={product} />
     </div>
   );
 }

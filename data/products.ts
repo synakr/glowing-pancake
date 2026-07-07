@@ -62,8 +62,26 @@ export type Product = {
 
   // SEO
   seo?: {
-    title: string;
-    description: string;
+    // Browser & Google title
+    title?: string;
+
+    // Meta description
+    description?: string;
+
+    // Optional custom keywords
+    keywords?: string[];
+
+    // Alternative product names
+    aliases?: string[];
+
+    // Common search phrases
+    searchTerms?: string[];
+
+    // Frequently Asked Questions
+    faq?: {
+      question: string;
+      answer: string;
+    }[];
   };
 
   // Detailed Content

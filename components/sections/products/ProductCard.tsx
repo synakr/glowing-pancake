@@ -1,11 +1,8 @@
 import { Product } from "@/data/products";
-import { Circle } from "lucide-react";
 import Link from "next/link";
 
 type ProductCardProps = {
   product: Product;
-
-  onOpen: () => void;
 };
 
 const categoryColors: Record<string, string> = {
@@ -20,11 +17,9 @@ const categoryColors: Record<string, string> = {
 
 export default function ProductCard({
   product,
-  onOpen,
 }: ProductCardProps) {
   return (
     <div
-      onClick={onOpen}
       className="
         group
         relative
@@ -71,7 +66,7 @@ export default function ProductCard({
           className="
             relative
             flex
-            h-[140px]
+            h-35
             w-full
             sm:h-[160px]
             md:h-[170px]
@@ -266,44 +261,11 @@ export default function ProductCard({
 
             {/* CTA */}
             <div className="flex items-center gap-2">
-              
-              {/* Quick View */}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onOpen();
-                }}
-                className="
-                  cursor-pointer
-                  flex
-                  items-center
-                  justify-center
-                  gap-1.5
-                  sm:gap-2
-                  rounded-full
-                  border
-                  border-slate-200
-                  bg-white
-                  px-3
-                  sm:px-4
-                  py-2
-                  sm:py-2.5
-                  text-xs
-                  sm:text-sm
-                  font-semibold
-                  text-slate-700
-                  transition-all
-                  hover:border-cyan-300
-                  hover:text-cyan-700
-                  whitespace-nowrap
-                "
-              >
-                Quick View
-              </button>
-
               {/* Product Page */}
               <Link
                 href={`/products/${product.slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
                 className="
                   flex
