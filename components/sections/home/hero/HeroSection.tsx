@@ -7,6 +7,7 @@ import {
   PillBottle,
 } from "lucide-react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function HeroSection() {
@@ -47,10 +48,15 @@ export default function HeroSection() {
                 </button>              
               </Link>
 
-              <Link href={"/about"}>
-                <button className="cursor-pointer rounded-full border border-slate-300 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-cyan-400">
-                  Learn More About Us
-                </button>              
+              <Link
+                href="https://wa.me/+918792084002?text=Hi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="flex cursor-pointer items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] hover:bg-[#20ba5a]">
+                  <FaWhatsapp className="h-4 w-4" />
+                  Connect on WhatsApp
+                </button>
               </Link>
             </div>
           </div>
