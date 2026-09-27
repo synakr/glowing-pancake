@@ -526,13 +526,13 @@ export const products: Product[] = [
     },
   },
   {
-    id: "telvion-h-01",
+    id: "ismile-telmaroxx-h",
 
-    slug: "telvion-h-40mg-12-5mg-tablet",
+    slug: "ismile-telmaroxx-h-40mg-12-5mg-tablet",
 
     status: "active",
 
-    name: "Telvion-H 40",
+    name: "Ismile Telmaroxx-H",
 
     genericName: "Telmisartan + Hydrochlorothiazide",
 
@@ -544,7 +544,7 @@ export const products: Product[] = [
 
     prescriptionRequired: true,
 
-    images: ["/products/telvion-h-1.png", "/products/telvion-h-2.png"],
+    images: ["/products/telmaroxx-1.png"],
 
     shortDescription:
       "Combination antihypertensive formulation designed to support effective blood pressure management and cardiovascular health.",
@@ -582,7 +582,7 @@ export const products: Product[] = [
 
     details: {
       introduction:
-        "Telvion H 40mg/12.5mg Tablet combines Telmisartan and Hydrochlorothiazide to provide effective management of hypertension when monotherapy alone is insufficient.",
+        "iSmile Telmaroxx-H 40mg/12.5mg Tablet combines Telmisartan and Hydrochlorothiazide to provide effective management of hypertension when monotherapy alone is insufficient.",
 
       dosageInstructions:
         "Take as directed by a healthcare professional. Can be taken with or without food.",
